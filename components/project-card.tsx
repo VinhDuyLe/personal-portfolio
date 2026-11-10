@@ -1,4 +1,3 @@
-import Link from "next/link";
 import type { Project } from "@/lib/content";
 
 export function ProjectCard({ project }: { project: Project }) {
@@ -15,7 +14,7 @@ export function ProjectCard({ project }: { project: Project }) {
       </div>
       <div className="card-footer">
         <div className="metric"><strong>{project.metric}</strong><span>{project.metricLabel}</span></div>
-        <Link href={`/projects/${project.slug}`} aria-label={`Read case study: ${project.title}`}>Read case study <span>↗</span></Link>
+        <a href={`/projects/${project.slug}`} aria-label={`Read case study: ${project.title}`}>Read case study <span>↗</span></a>
       </div>
     </article>
   );
