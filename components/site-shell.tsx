@@ -4,9 +4,13 @@ import { ThemeToggle } from "./theme-toggle";
 export function Header() {
   return (
     <header className="site-header">
+      <div className="ticker" aria-hidden="true"><div>
+        <span>AGENTS THAT PLAN</span><b>✦</b><span>BACKENDS THAT ENDURE</span><b>✦</b><span>TOOLS THAT TALK</span><b>✦</b>
+        <span>AGENTS THAT PLAN</span><b>✦</b><span>BACKENDS THAT ENDURE</span><b>✦</b><span>TOOLS THAT TALK</span><b>✦</b>
+      </div></div>
       <div className="shell header-inner">
         <a href="/" className="wordmark" aria-label="VDL — Vinh Duy Le, home">
-          <span>VDL</span><i />
+          <span>VINH<br />DUY LE</span>
         </a>
         <nav aria-label="Main navigation">
           <a href="/projects">Work</a>
@@ -26,7 +30,7 @@ export function Footer() {
       <div className="shell footer-grid">
         <div>
           <span className="kicker">Let’s build something dependable.</span>
-          <p className="footer-title">Backend depth.<br />AI systems thinking.</p>
+          <p className="footer-title">Let’s make<br />systems talk.</p>
         </div>
         <div className="footer-links">
           <a href="/projects">Selected work ↗</a>
