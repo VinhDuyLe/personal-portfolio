@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArchitectureFlow } from "@/components/architecture-flow";
 import { SiteShell } from "@/components/site-shell";
@@ -25,7 +24,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       <main id="main">
         <article>
           <header className="case-hero shell">
-            <Link href="/projects" className="back-link">← All work</Link>
+            <a href="/projects" className="back-link">← All work</a>
             <div className="case-meta"><span>{project.index}</span><span>{project.eyebrow}</span></div>
             <h1>{project.title}</h1>
             <p className="case-lede">{project.summary}</p>
@@ -41,7 +40,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
               {project.sections.map((section, index) => <section key={section.title}><span>0{index + 1}</span><h2>{section.title}</h2><p>{section.body}</p></section>)}
             </div>
           </section>
-          <Link className="next-case" href={`/projects/${next.slug}`}><span>Next case study</span><strong>{next.title}</strong><i>↗</i></Link>
+          <a className="next-case" href={`/projects/${next.slug}`}><span>Next case study</span><strong>{next.title}</strong><i>↗</i></a>
         </article>
       </main>
     </SiteShell>
