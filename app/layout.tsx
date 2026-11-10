@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Instrument_Serif, Manrope, IBM_Plex_Mono } from "next/font/google";
+import { Archivo_Black, Nunito_Sans, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 
-const display = Instrument_Serif({ variable: "--font-display", subsets: ["latin"], weight: "400" });
-const sans = Manrope({ variable: "--font-sans", subsets: ["latin"] });
+const display = Archivo_Black({ variable: "--font-display", subsets: ["latin"], weight: "400" });
+const sans = Nunito_Sans({ variable: "--font-sans", subsets: ["latin"] });
 const mono = IBM_Plex_Mono({ variable: "--font-mono", subsets: ["latin"], weight: ["400", "500"] });
 
 export const metadata: Metadata = {
