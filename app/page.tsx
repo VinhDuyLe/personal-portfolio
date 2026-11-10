@@ -12,7 +12,7 @@ export default function Home() {
           <div className="hero-grid">
             <div>
               <p className="hero-overline">Backend engineering × Agentic AI</p>
-              <h1>Systems that<br /><em>reason.</em> Backends<br />that <em>endure.</em></h1>
+              <h1>Systems<br />that <em>talk.</em></h1>
             </div>
             <div className="hero-aside">
               <p>{profile.introduction}</p>
@@ -21,6 +21,13 @@ export default function Home() {
                 {profile.resumePath && <a className="text-link" href={profile.resumePath} target="_blank" rel="noreferrer">View résumé ↗</a>}
               </div>
             </div>
+          </div>
+          <div className="hero-machine" aria-hidden="true">
+            <div className="machine-core"><span>MCP</span><i /></div>
+            <div className="machine-node node-one">01<small>PLAN</small></div>
+            <div className="machine-node node-two">02<small>CALL</small></div>
+            <div className="machine-node node-three">03<small>TRACE</small></div>
+            <div className="machine-wire wire-one" /><div className="machine-wire wire-two" /><div className="machine-wire wire-three" />
           </div>
           <div className="hero-meta">
             <span>Based in {profile.location}</span>
