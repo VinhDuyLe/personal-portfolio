@@ -2,7 +2,7 @@
 
 export function ThemeToggle() {
   function toggle() {
-    const current = document.documentElement.dataset.theme ?? (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    const current = document.documentElement.dataset.theme ?? "light";
     const next = current === "light" ? "dark" : "light";
     document.documentElement.dataset.theme = next;
     window.localStorage.setItem("theme", next);
