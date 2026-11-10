@@ -28,6 +28,10 @@
 }
 
 * { box-sizing: border-box; }
+html, body { cursor: url("/cursor-default.svg") 4 4, default; }
+a, button, [role="button"], input[type="button"], input[type="submit"], summary, label[for] {
+  cursor: url("/cursor-pointer.svg") 21 17, pointer;
+}
 html { scroll-behavior: smooth; background: var(--paper); }
 body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-sans), sans-serif; font-size: 16px; line-height: 1.6; transition: background .25s ease, color .25s ease; }
 a { color: inherit; text-decoration: none; }
@@ -45,7 +49,7 @@ button { font: inherit; }
 .header-inner nav { display: flex; gap: 34px; font-size: 13px; }
 .header-inner nav a { color: var(--muted); transition: color .2s; }
 .header-inner nav a:hover { color: var(--ink); }
-.theme-toggle { justify-self: end; border: 0; background: transparent; color: var(--ink); display: flex; gap: 9px; align-items: center; cursor: pointer; font: 400 11px var(--font-mono); text-transform: uppercase; letter-spacing: .08em; }
+.theme-toggle { justify-self: end; border: 0; background: transparent; color: var(--ink); display: flex; gap: 9px; align-items: center; font: 400 11px var(--font-mono); text-transform: uppercase; letter-spacing: .08em; }
 
 .hero { min-height: calc(100vh - 74px); display: flex; flex-direction: column; padding-top: 46px; border-bottom: 1px solid var(--line); position: relative; }
 .hero::before { content: ""; position: absolute; inset: 0 0 auto 50%; height: 100%; border-left: 1px solid color-mix(in srgb, var(--line) 45%, transparent); pointer-events: none; }
@@ -114,10 +118,10 @@ button { font: inherit; }
 .agent-form > div { display: grid; grid-template-columns: 1fr auto; border: 1px solid var(--line); background: var(--card); }
 .agent-form input { min-width: 0; border: 0; background: transparent; color: var(--ink); padding: 14px 16px; outline: none; }
 .agent-form input::placeholder { color: var(--muted); }
-.agent-form button { border: 0; border-left: 1px solid var(--line); background: var(--ink); color: var(--paper); padding: 0 18px; cursor: pointer; font-size: 11px; font-weight: 700; text-transform: uppercase; }
+.agent-form button { border: 0; border-left: 1px solid var(--line); background: var(--ink); color: var(--paper); padding: 0 18px; font-size: 11px; font-weight: 700; text-transform: uppercase; }
 .agent-form button:hover { background: var(--accent); color: var(--accent-ink); }
 .agent-suggestions { padding: 0 24px 18px; display: flex; flex-wrap: wrap; gap: 7px; }
-.agent-suggestions button { border: 1px solid var(--line); border-radius: 99px; background: transparent; color: var(--muted); padding: 6px 10px; font: 400 9px var(--font-mono); cursor: pointer; }
+.agent-suggestions button { border: 1px solid var(--line); border-radius: 99px; background: transparent; color: var(--muted); padding: 6px 10px; font: 400 9px var(--font-mono); }
 .agent-suggestions button:hover { border-color: var(--accent); color: var(--ink); }
 .agent-note { margin: 0; padding: 12px 24px; border-top: 1px solid var(--line); color: var(--muted); font: 400 8px var(--font-mono); text-transform: uppercase; letter-spacing: .07em; }
 
@@ -141,7 +145,7 @@ button { font: inherit; }
 .page-intro h1 { font-size: clamp(62px, 8vw, 115px); }
 .page-intro > p:last-child { color: var(--muted); max-width: 440px; font-size: 18px; }
 .filter-row { display: flex; border-bottom: 1px solid var(--line); margin-bottom: 35px; gap: 36px; overflow-x: auto; }
-.filter-row button { border: 0; background: transparent; color: var(--muted); padding: 0 0 13px; cursor: pointer; white-space: nowrap; font: 500 11px var(--font-mono); text-transform: uppercase; position: relative; }
+.filter-row button { border: 0; background: transparent; color: var(--muted); padding: 0 0 13px; white-space: nowrap; font: 500 11px var(--font-mono); text-transform: uppercase; position: relative; }
 .filter-row button.active { color: var(--ink); }
 .filter-row button.active::after { content: ""; position: absolute; height: 2px; background: var(--accent); left: 0; right: 0; bottom: -1px; }
 .filter-row sup { color: var(--accent); margin-left: 5px; }
