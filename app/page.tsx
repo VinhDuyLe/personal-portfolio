@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { ProjectCard } from "@/components/project-card";
 import { ResumeAgent } from "@/components/resume-agent";
 import { SiteShell } from "@/components/site-shell";
@@ -18,7 +17,7 @@ export default function Home() {
             <div className="hero-aside">
               <p>{profile.introduction}</p>
               <div className="hero-actions">
-                <Link className="button button-primary" href="/projects">Explore selected work <span>↗</span></Link>
+                <a className="button button-primary" href="/projects">Explore selected work <span>↗</span></a>
                 {profile.resumePath && <a className="text-link" href={profile.resumePath} target="_blank" rel="noreferrer">View résumé ↗</a>}
               </div>
             </div>
@@ -57,7 +56,7 @@ export default function Home() {
         <section className="section work-section" aria-labelledby="work-heading">
           <div className="shell section-heading"><span className="section-number">02</span><div><p className="kicker">Selected work</p><h2 id="work-heading">Complex systems,<br />made legible.</h2></div></div>
           <div className="shell projects-list">{projects.map((project) => <ProjectCard project={project} key={project.slug} />)}</div>
-          <div className="shell section-end"><Link className="text-link" href="/projects">View all case studies ↗</Link></div>
+          <div className="shell section-end"><a className="text-link" href="/projects">View all case studies ↗</a></div>
         </section>
 
         <section className="section shell" aria-labelledby="experience-heading">
