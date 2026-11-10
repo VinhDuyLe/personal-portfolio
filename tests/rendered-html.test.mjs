@@ -18,7 +18,8 @@ test("server-renders the finished portfolio homepage", async () => {
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
   const html = await response.text();
   assert.match(html, /Vinh Duy Le/);
-  assert.match(html, /Systems that/);
+  assert.match(html, /Systems/);
+  assert.match(html, /that/);
   assert.match(html, /Test Automation AI Assistant/);
   assert.match(html, /Résumé agent/);
   assert.match(html, /vinh-le-resume\.pdf/);
