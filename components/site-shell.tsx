@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { profile } from "@/lib/content";
 import { ThemeToggle } from "./theme-toggle";
 
@@ -6,12 +5,12 @@ export function Header() {
   return (
     <header className="site-header">
       <div className="shell header-inner">
-        <Link href="/" className="wordmark" aria-label="VDL — Vinh Duy Le, home">
+        <a href="/" className="wordmark" aria-label="VDL — Vinh Duy Le, home">
           <span>VDL</span><i />
-        </Link>
+        </a>
         <nav aria-label="Main navigation">
-          <Link href="/projects">Work</Link>
-          <Link href="/about">About</Link>
+          <a href="/projects">Work</a>
+          <a href="/about">About</a>
           <a href={profile.resumePath ?? "#"} target="_blank" rel="noreferrer">Résumé</a>
           <a href={profile.github} target="_blank" rel="noreferrer">GitHub</a>
         </nav>
@@ -30,7 +29,7 @@ export function Footer() {
           <p className="footer-title">Backend depth.<br />AI systems thinking.</p>
         </div>
         <div className="footer-links">
-          <Link href="/projects">Selected work ↗</Link>
+          <a href="/projects">Selected work ↗</a>
           {profile.resumePath && <a href={profile.resumePath} target="_blank" rel="noreferrer">Résumé ↗</a>}
           <a href={profile.github} target="_blank" rel="noreferrer">GitHub ↗</a>
           {profile.linkedIn && <a href={profile.linkedIn} target="_blank" rel="noreferrer">LinkedIn ↗</a>}
