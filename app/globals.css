@@ -30,7 +30,7 @@
 * { box-sizing: border-box; }
 html, body { cursor: url("/cursor-default.svg") 4 4, default; }
 a, button, [role="button"], input[type="button"], input[type="submit"], summary, label[for] {
-  cursor: url("/cursor-pointer.svg") 21 17, pointer;
+  cursor: url("/cursor-pointer.svg") 11 4, pointer;
 }
 html { scroll-behavior: smooth; background: var(--paper); }
 body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-sans), sans-serif; font-size: 16px; line-height: 1.6; transition: background .25s ease, color .25s ease; }
