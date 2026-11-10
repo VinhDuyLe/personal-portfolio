@@ -27,19 +27,6 @@
   --card: #191a16;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme]) {
-    --paper: #12130f;
-    --ink: #f2efe7;
-    --muted: #a7a79e;
-    --line: #3b3c35;
-    --soft: #1d1e19;
-    --accent: #ed9b3e;
-    --accent-ink: #1b1208;
-    --card: #191a16;
-  }
-}
-
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; background: var(--paper); }
 body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-sans), sans-serif; font-size: 16px; line-height: 1.6; transition: background .25s ease, color .25s ease; }
